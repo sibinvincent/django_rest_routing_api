@@ -10,7 +10,20 @@ from .serializers import BookSerializer
 
 class BookViewSet(viewsets.ModelViewSet):
     permission_classes = [permissions.IsAuthenticated]
-    #authentication_classes = [JWTAuthentication]
+    authentication_classes = [JWTAuthentication]
     queryset = Book.objects.all()
     serializer_class = BookSerializer
     #http_method_names = ['get']   this can be used if you need only get method
+
+
+
+
+   ## Only for view method or get method
+class BookViewSetGet(viewsets.ModelViewSet):
+    queryset = Book.objects.all()
+    serializer_class = BookSerializer
+    http_method_names = ['get']
+
+
+
+

@@ -141,6 +141,8 @@ AUTH_USER_MODEL = 'loginuser.User'
 ## cos allow
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8002',
+    'http://127.0.0.1:8002'
+
 ]
 
 #JWT_SETTINGS
